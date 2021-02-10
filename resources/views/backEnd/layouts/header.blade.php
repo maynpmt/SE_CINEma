@@ -1,6 +1,6 @@
 <!--Header-part-->
 <div id="header">
-    <h1><a href="dashboard.html">Laravel Admin</a></h1>
+<a href="{{url('/')}}"><img src="{{asset('frontEnd/images/home/logo2.png')}}" width="150" alt="" /></a>
 </div>
 <!--close-Header-part-->
 <!--top-Header-menu-->
@@ -22,9 +22,9 @@
     </ul>
 </div>
 <!--close-top-Header-menu-->
-<!--start-top-serch-->
+<!--start-top-serch-
 <div id="search">
     <input type="text" placeholder="Search here..."/>
     <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
-</div>
+</div>->
 <!--close-top-serch-->

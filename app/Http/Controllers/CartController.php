@@ -44,6 +44,7 @@ class CartController extends Controller
                     'product_color'=>$inputToCart['product_color'],
                     'size'=>$inputToCart['size']])->count();
                 if($count_duplicateItems>0){
+                    Cart_model::create($inputToCart);
                     return back()->with('message','This Item Added already');
                 }else{
                     Cart_model::create($inputToCart);

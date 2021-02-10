@@ -12,6 +12,7 @@
                         <button id="search-button" type="button" class="search-button btn" title="Search"><i class="fa fa-search"></i></button>
                     </div>
                 </div>
+                
 
                 <ul class="nav-links">
                     <!-- logged in -->
@@ -27,14 +28,14 @@
                             <a href="{{url('#')}}"><img src="{{asset('frontEnd/images/home/profile.png')}}" width="50" alt="" /></a>
                             @if(Auth::check()) 
                                 <div class="dropdown-content">
-                                    <a href="#">View profile</a>
-                                    <a href="{{ url('/login')}}">Admin</a>
+                                    <a href="{{ url('/myaccount')}}">View profile</a>
+                                    <a href="{{ url('/admin')}}">Admin</a>
                                     <a href="{{ url('/logout') }}">Logout</a>
                                 </div>
                             @else
                                 <div class="dropdown-content">
                                     <a href="{{url('/login_page')}}">Login / Register</a>
-                                    
+                                    <a href="{{ url('/admin')}}">Admin</a>
                                 </div>
                             @endif
                         </div>
