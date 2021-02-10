@@ -38,8 +38,8 @@
                                 </div>
                             @endif
                         </div>
-                    @if(Auth::check()) 
-                        <a href="{{url('/admin')}}"><img src="{{asset('frontEnd/images/home/profile.png')}}" width="50" alt="" /></a>
+                    <!-- @if(Auth::check()) 
+                        <a href="{{url('/admin')}}"><img src="{{asset('frontEnd/images/home/profile.png')}}" width="50" alt="" /></a> -->
                          <!--
                     @else
 
