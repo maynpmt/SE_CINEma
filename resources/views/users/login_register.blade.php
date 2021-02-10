@@ -1,4 +1,4 @@
-@extends('frontEnd.layouts.master')
+@extends('frontEnd.layouts.master-paan')
 @section('title','Login Page')
 @section('slider')
 @endsection
@@ -77,28 +77,28 @@
                                     <td> 
                                     <input type="hidden" name="_token" value="{{csrf_token()}}">
                                     <input type="text" placeholder="Address" name="name" value="{{old('name')}}"/>
-                                    <span class="text-danger">{{$errors->first('name')}}</span></td>
+                                    <span class="text-danger">{{$errors->first('Address')}}</span></td>
                                 </tr>
                                 <tr>
                                     <td><b>City</b></td>
                                     <td> 
                                     <input type="hidden" name="_token" value="{{csrf_token()}}">
                                     <input type="text" placeholder="City" name="name" value="{{old('name')}}"/>
-                                    <span class="text-danger">{{$errors->first('name')}}</span></td>
+                                    <span class="text-danger">{{$errors->first('City')}}</span></td>
                                 </tr>
                                 <tr>
                                     <td><b>Country</b></td>
                                     <td> 
                                     <input type="hidden" name="_token" value="{{csrf_token()}}">
                                     <input type="text" placeholder="Country" name="name" value="{{old('name')}}"/>
-                                    <span class="text-danger">{{$errors->first('name')}}</span></td>
+                                    <span class="text-danger">{{$errors->first('Country')}}</span></td>
                                 </tr>
                                 <tr>
                                     <td><b>Phone number</b></td>
                                     <td> 
                                     <input type="hidden" name="_token" value="{{csrf_token()}}">
                                     <input type="text" placeholder="Phone number" name="name" value="{{old('name')}}"/>
-                                    <span class="text-danger">{{$errors->first('name')}}</span></td>
+                                    <span class="text-danger">{{$errors->first('Phone number')}}</span></td>
                                 </tr>
                                 <tr>
                                     <td></td>

@@ -1,13 +1,21 @@
 @extends('frontEnd.layouts.master')
 @section('title','Home Page')
 @section('content')
+
     <section>
         <div class="container">
+           
+            <!-- banner slide -->
+            <div class="row">
+                @include('frontEnd.layouts.carousel')
+            </div>
+
+            <!-- end of banner slide -->
+
             <div class="row">
                 <div class="col-sm-3">
                     @include('frontEnd.layouts.category_menu')
                 </div>
-
                 <div class="col-sm-9 padding-right">
                     <div class="features_items"><!--features_items-->
                         <h2 class="title text-center">Features Items</h2>
@@ -38,5 +46,14 @@
                 </div>
             </div>
         </div>
+
+        <!-- <div class="row">
+            <div class="col-sm-3">
+                <h3>Category</h3>
+            </div>
+
+        </div> -->
+
+       
     </section>
 @endsection

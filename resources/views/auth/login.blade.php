@@ -7,13 +7,14 @@
     <!-- <link rel="stylesheet" href="{{asset('css/bootstrap-responsive.min.css')}}" /> -->
     <!-- <link rel="stylesheet" href="{{asset('css/matrix-login.css')}}" /> -->
     <link rel="stylesheet" href="{{asset('css/admin.css')}}" />
+    <!-- <link href="{{asset('frontEnd/css/main-may.css')}}" rel="stylesheet"> -->
     <link href="{{asset('font-awesome/css/font-awesome.css')}}" rel="stylesheet" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
-@include('frontEnd.layouts.header')
+@include('frontEnd.layouts.header-paan')
 <div class="w3-cell-row">
     <div class="w3-container w3-cell">
     

@@ -11,8 +11,7 @@
     <link href="{{asset('frontEnd/css/prettyPhoto.css')}}" rel="stylesheet">
     <link href="{{asset('frontEnd/css/price-range.css')}}" rel="stylesheet">
     <link href="{{asset('frontEnd/css/animate.css')}}" rel="stylesheet">
-    
-    <link href="{{asset('frontEnd/css/main-may.css')}}" rel="stylesheet">
+    <link href="{{asset('frontEnd/css/main.css')}}" rel="stylesheet">
     <link href="{{asset('frontEnd/css/responsive.css')}}" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="{{asset('frontEnd/js/html5shiv.js')}}"></script>
@@ -22,7 +21,7 @@
 </head><!--/head-->
 
 <body>
-@include('frontEnd.layouts.header')
+@include('frontEnd.layouts.header-paan')
 @section('slider')
     @include('frontEnd.layouts.slider')
 @show

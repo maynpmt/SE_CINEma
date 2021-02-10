@@ -1,81 +1,71 @@
 <header id="header"><!--header-->
-    <!-- <div class="header_top"> header_top -->
-        <!-- <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="contactinfo">
-                        <ul class="nav nav-pills">
-                            <li><a href="#"><i class="fa fa-phone"></i> 010 010010</a></li>
-                            <li><a href="#"><i class="fa fa-envelope"></i> info@nodomain.com</a></li>
-                        </ul>
-                    </div>
+    <div class="header-middle"> <!--header-middle-->
+        <div class="header-container">
+            <nav>
+                <div class="logo">
+                    <a href="{{url('/')}}"><img src="{{asset('frontEnd/images/home/logo2.png')}}" width="150" alt="" /></a>
                 </div>
-                <div class="col-sm-6">
-                    <div class="social-icons pull-right">
-                        <ul class="nav navbar-nav">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-    <!-- </div> /header_top -->
 
-    <div class="header-middle"><!--header-middle-->
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="logo pull-left">
-                        <a href="{{url('/')}}"><img src="{{asset('frontEnd/images/home/logo.png')}}" alt="" height="100" /></a>
+                <div class="search-box">
+                    <input id="search-input" type="search" id="form1" class="form-control" placeholder="Search"/>
+                    <div class="search-icon">
+                        <button id="search-button" type="button" class="search-button btn" title="Search"><i class="fa fa-search"></i></button>
                     </div>
-                    <!-- <div class="btn-group pull-right">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                                USA
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Canada</a></li>
-                                <li><a href="#">UK</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                                DOLLAR
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Canadian Dollar</a></li>
-                                <li><a href="#">Pound</a></li>
-                            </ul>
-                        </div>
-                    </div> -->
                 </div>
-                <div class="col-sm-8">
-                    <!-- <div class="shop-menu pull-right">
-                        <ul class="nav navbar-nav">
-                            <li><a href="{{url('/viewcart')}}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-                            @if(Auth::check())
-                                <li><a href="{{url('/myaccount')}}"><i class="fa fa-user"></i> My Account</a></li>
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-lock"></i> Logout </a>
-                                </li>
+
+                <ul class="nav-links">
+                    <!-- logged in -->
+                    @if(Auth::check())
+                        <li>
+                            <a href="{{url('/viewcart')}}"><i class="fa fa-shopping-cart" title="cart"></i></a>
+                        </li>
+                    @endif                        
+                    
+                    <li>
+                        <div class="dropdown">
+                        
+                            <a href="{{url('#')}}"><img src="{{asset('frontEnd/images/home/profile.png')}}" width="50" alt="" /></a>
+                            @if(Auth::check()) 
+                                <div class="dropdown-content">
+                                    <a href="#">View profile</a>
+                                    <a href="{{ url('/login')}}">Admin</a>
+                                    <a href="{{ url('/logout') }}">Logout</a>
+                                </div>
                             @else
-                                <li><a href="{{url('/login_page')}}"><i class="fa fa-lock"></i> Login</a></li>
+                                <div class="dropdown-content">
+                                    <a href="{{url('/login_page')}}">Login / Register</a>
+                                    
+                                </div>
                             @endif
-                        </ul>
-                    </div> -->
-                </div>
-            </div>
+                        </div>
+                    @if(Auth::check()) 
+                        <a href="{{url('/admin')}}"><img src="{{asset('frontEnd/images/home/profile.png')}}" width="50" alt="" /></a>
+                         <!--
+                    @else
+
+                        <div class="dropdown">
+                            <a href="{{url('/login_page')}}" class="dropbtn"><img src="{{asset('frontEnd/images/home/profile.png')}}" width="50" alt="" /></a>
+                            <div class="dropdown-content">
+                                <a href="{{url('/user_profile')}}">View profile</a>
+                                <a href="{{url('/login')}}">Admin</a>
+                                <a href="#">Logout</a>
+                            </div>
+                        </div>
+                    @endif -->
+                    </li>
+                </ul>
+            </nav>
+                
+        
+            
+               
         </div>
+        
     </div><!--/header-middle-->
 
-    <!-- <div class="header-bottom">    header-bottom -->
-        <!-- <div class="container">
+    <!--header-bottom-->
+    <!-- <div class="header-bottom">
+        <div class="container">
             <div class="row">
                 <div class="col-sm-9">
                     <div class="navbar-header">
@@ -100,12 +90,9 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-3">
-                    <div class="search_box pull-right">
-                        <input type="text" placeholder="Search"/>
-                    </div>
-                </div>
             </div>
-        </div> -->
-    <!-- </div> /header-bottom -->
+        </div>
+    </div>
+     -->
+    <!--/header-bottom-->
 </header><!--/header-->
