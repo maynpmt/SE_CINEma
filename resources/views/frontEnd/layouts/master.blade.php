@@ -11,7 +11,6 @@
     <link href="{{asset('frontEnd/css/prettyPhoto.css')}}" rel="stylesheet">
     <link href="{{asset('frontEnd/css/price-range.css')}}" rel="stylesheet">
     <link href="{{asset('frontEnd/css/animate.css')}}" rel="stylesheet">
-    
     <link href="{{asset('frontEnd/css/main-may.css')}}" rel="stylesheet">
     <link href="{{asset('frontEnd/css/responsive.css')}}" rel="stylesheet">
     <!--[if lt IE 9]>

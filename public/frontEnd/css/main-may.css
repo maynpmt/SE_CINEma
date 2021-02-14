@@ -1524,7 +1524,7 @@ h2.title {
 }
 
 
-.login-form form input, .signup-form table input {
+.login-form form input, .signup-form form input {
   background: #FFFFFF;
   border-radius: 20px;
   border: medium none ;
@@ -1557,10 +1557,10 @@ h2.title {
   margin-top: 25px;
 }
 
-.login-form form button, .signup-form table button {
+.login-form form button, .signup-form form button {
   background: #000000;
   border: medium none;
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 30px;
   color: #FFFFFF;
   display: block;
@@ -1572,6 +1572,17 @@ h2.title {
   margin-right: auto;
   margin-top: 20px;
 }
+
+.login-form form button:hover{
+  background: #FF4E42;
+  color: #000;
+}
+
+.signup-form form button:hover{
+  background: #FF4E42;
+  color: #000;
+}
+
 .signup-form table button{
   position:relative;
    right: -20%;
@@ -1615,7 +1626,7 @@ h2.title {
 .or{
 	/* background: #FE980F; */
 	/* border-radius: 40px; */
-	color: #FFFFFF;
+	color: #000;
 	font-family: 'Poppins', sans-serif;
 	font-size: 24px;
 	height: 100px;
@@ -1647,7 +1658,12 @@ h2.title {
   font-size: 14px;
 }
 
+.login-form legend , .signup-form legend{
+font-size: 25px;
+color: #000;
+font-family: 'Poppins', sans-serif;
 
+}
 
 /*************************
 *******Cart CSS******
@@ -2050,7 +2066,7 @@ h2.title {
   margin-left: 5%
 }
 
-
+ 
 .order-message textarea {
   font-size: 12px;
   height: 335px;

@@ -3,7 +3,7 @@
         <div class="header-container">
             <nav>
                 <div class="logo">
-                    <a href="{{url('/')}}"><img src="{{asset('frontEnd/images/home/logo2.png')}}" width="150" alt="" /></a>
+                    <a href="{{url('/')}}"><img src="{{asset('frontEnd/images/home/logo.png')}}" width="150" alt="" /></a>
                 </div>
 <!-- 
                 <div class="search-box">
