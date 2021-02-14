@@ -8,7 +8,7 @@
             <div class="col-sm-3">
                 @include('frontEnd.layouts.category_menu')
             </div>
-            <div class="col-sm-9 padding-right">
+            <div class="col-sm-9 padding-right content">
                 @if(Session::has('message'))
                     <div class="alert alert-success text-center" role="alert">
                         {{Session::get('message')}}
@@ -33,7 +33,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-sm-7">
+            <div class="col-sm-7 product-detail-form">
                 <form action="{{route('addToCart')}}" method="post" role="form">
                     <input type="hidden" name="_token" value="{{csrf_token()}}">
                     <input type="hidden" name="products_id" value="{{$detail_product->id}}">
@@ -42,28 +42,54 @@
                     <input type="hidden" name="product_color" value="{{$detail_product->p_color}}">
                     <input type="hidden" name="price" value="{{$detail_product->price}}" id="dynamicPriceInput">
                     <div class="product-information"><!--/product-information-->
-                        <img src="{{asset('frontEnd/images/product-details/new.jpg')}}" class="newarrival" alt="" />
-                        <h2>{{$detail_product->p_name}}</h2>
+                        <!-- <img src="{{asset('frontEnd/images/product-details/new.jpg')}}" class="newarrival" alt="" /> -->
+                        <h1>{{$detail_product->p_name}}</h1>
                         <p>Code ID: {{$detail_product->p_code}}</p>
-                        <span>
-                            <select name="size" id="idSize" class="form-control">
-                        	<option value="">Select Size</option>
-                            @foreach($detail_product->attributes as $attrs)
-                                <option value="{{$detail_product->id}}-{{$attrs->size}}">{{$attrs->size}}</option>
-                            @endforeach
-                        </select>
-                        </span><br>
-                        <span>
-                            <span id="dynamic_price">US ${{$detail_product->price}}</span>
-                            <label>Quantity:</label>
-                            <input type="text" name="quantity" value="{{$totalStock}}" id="inputStock"/>
+
+                        <!-- product detail -->
+                        <p id="detail">
+                            {{$detail_product->description}}
+                        </p>
+
+                        <span>   <!-- Price -->
+                            <span id="dynamic_price">THB {{$detail_product->price}}</span>
+
+                            <div class="product-option">
+                                <span>   <!-- Option -->
+                                    <select name="size" id="idSize" class="form-control">
+                                        <option value="">Select Size</option>
+                                        @foreach($detail_product->attributes as $attrs)
+                                            <option value="{{$detail_product->id}}-{{$attrs->size}}">{{$attrs->size}}</option>
+                                        @endforeach
+                                    </select>
+                                </span>
+                            </div>
+
+                            <div class="quantity">
+                                <label>Quantity:</label>
+                                <!-- <input type="text" name="quantity" value="{{$totalStock}}" id="inputStock"/> -->
+                                <input id="inputStock" name="quantity" type=number value=1 min=1 max={{$totalStock}}>
+                                <script>
+                                function increment() {
+                                    document.getElementById('demoInput').stepUp();
+                                }
+                                function decrement() {
+                                    document.getElementById('demoInput').stepDown();
+                                }
+                                </script>
+                            </div>
+                            
                             @if($totalStock>0)
-                            <button type="submit" class="btn btn-fefault cart" id="buttonAddToCart">
+                                <button type="submit" class="btn btn-fefault cart" id="buttonAddToCart">
                                 <i class="fa fa-shopping-cart"></i>
                                 Add to cart
-                            </button>
+                                </button>
+                            @else
+                                <p>Sold out</p>
                             @endif
                         </span>
+
+
                         <p><b>Availability:</b>
                             @if($totalStock>0)
                                 <span id="availableStock">In Stock</span>
@@ -71,8 +97,8 @@
                                 <span id="availableStock">Out of Stock</span>
                             @endif
                         </p>
-                        <p><b>Condition:</b> New</p>
-                        <a href=""><img src="{{asset('frontEnd/images/product-details/share.png')}}" class="share img-responsive"  alt="" /></a>
+                        <!-- <p><b>Condition:</b> New</p>
+                        <a href=""><img src="{{asset('frontEnd/images/product-details/share.png')}}" class="share img-responsive"  alt="" /></a> -->
                     </div><!--/product-information-->
                 </form>
 
@@ -80,7 +106,7 @@
         </div><!--/product-details-->
 
         <div class="category-tab shop-details-tab"><!--category-tab-->
-            <div class="col-sm-12">
+            <!-- <div class="col-sm-12">
                 <ul class="nav nav-tabs">
                     <li class="active"><a href="#details" data-toggle="tab">Details</a></li>
                     <li><a href="#companyprofile" data-toggle="tab">Company Profile</a></li>
@@ -167,11 +193,11 @@
                     </div>
                 </div>
 
-            </div>
+            </div> -->
         </div><!--/category-tab-->
 
         <div class="recommended_items"><!--recommended_items-->
-            <h2 class="title text-center">recommended items</h2>
+            <!-- <h2 class="title text-center">recommended items</h2>
 
             <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
@@ -202,7 +228,7 @@
                 <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
                     <i class="fa fa-angle-right"></i>
                 </a>
-            </div>
+            </div> -->
         </div><!--/recommended_items-->
 
     </div>

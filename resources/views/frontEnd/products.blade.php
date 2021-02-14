@@ -26,9 +26,11 @@
                                 <div class="single-products">
                                     <div class="productinfo text-center">
                                         <a href="{{url('/product-detail',$product->id)}}"><img src="{{url('products/small/',$product->image)}}" alt="" /></a>
-                                        <h2>$ {{$product->price}}</h2>
-                                        <p>{{$product->p_name}}</p>
-                                        <a href="{{url('/product-detail',$product->id)}}" class="btn btn-default add-to-cart">View Product</a>
+                                        <div class="detail">
+                                            <span><h5>{{$product->p_name}}</h5></span>
+                                            <span><h3>{{$product->price}}.-</h3></span>
+                                        </div>
+                                        <!-- <a href="{{url('/product-detail',$product->id)}}" class="btn btn-default add-to-cart">View Product</a> -->
                                     </div>
                                 </div>
                                 <!-- <div class="choose">

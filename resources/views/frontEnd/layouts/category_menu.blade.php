@@ -9,15 +9,14 @@
                 $sub_categories=DB::table('categories')->select('id','name')->where([['parent_id',$category->id],['status',1]])->get();
             ?>
             <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
+                <div class="panel-heading category-heading">
+                    <h4 class="panel-title category-title">
                         <a data-toggle="collapse" data-parent="#accordian" href="#sportswear{{$category->id}}">
                             @if(count($sub_categories)>0)
                                 <span class="badge pull-right"><i class="fa fa-plus"></i></span>
                             @endif
                         </a>
-                            <a href="{{route('cats',$category->id)}}">{{$category->name}}</a>
-
+                        <a href="{{route('cats',$category->id)}}">{{$category->name}}</a>
                     </h4>
                 </div>
                 @if(count($sub_categories)>0)
